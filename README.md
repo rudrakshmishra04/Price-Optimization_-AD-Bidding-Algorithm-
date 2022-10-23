@@ -15,6 +15,7 @@ Make_Model_ARS – contains the historical average ARS for each make/model
 ## Bidding logic:
 
 ### Step 1: Calculate initial bid for each KW based on its historical performance
+
   a) If KW has >10 conversions
   Calculate KW bid based on KW’s historical performance
   New KW Bid = KW CVR * Mk/Mo ARS
@@ -34,20 +35,27 @@ Make_Model_ARS – contains the historical average ARS for each make/model
  
 
 ### Step 2: Adjust calculated bid based on the following considerations:
-a) Adjust bid based on current onsite inventory
-If current Mk/Mo/Yr inv < hist Mk/Mo/Yr inv
-Reduce KW bid by % equal to half the % diff between current and historical inv
-E.g., if hist avg is 20 and current inv is 15, reduce bid by 12.5% (i.e., half of 25%)
-b) Adjust bid based on Mkt CVR only for KWs whose bids were calculated based on Mk/Mo/Yr or Mk/Mo CVR (i.e., not based on KW or AG CVR)
-Increase/decrease KW bid by the half the % above or below overall site CVR the market CVR is relative to overall site average
-i.e., if overall CVR for the entire site is 1.0% and DAL overall CVR is 1.07%, increase bids for KWs in DAL by 3.5%
-c) Cap bids at reasonable levels, based on their quality score
-KWs with QS>7 cannot be higher than Est First Pos Bid
-KWs with QS<8 and QS>5 cannot be higher than average of Est Top of Page Bid and Est First Pos Bid
-KWs with QS<6 cannot be higher than (Est Top of Page Bid *0.9) + (Est First Pos Bid *0.1)
-No bids can be higher than $12
-d) Cap bids of broad match KWs
-Ensure that no bid for a broad match KW is greater than any bid for an exact match KW within the same ad group
+
+a) Adjust bid based on current onsite inventory  
+  If current Mk/Mo/Yr inv < hist Mk/Mo/Yr inv  
+  Reduce KW bid by % equal to half the % diff between current and historical inv  
+  E.g., if hist avg is 20 and current inv is 15, reduce bid by 12.5% (i.e., half of 25%)  
+  
+  
+b) Adjust bid based on Mkt CVR only for KWs whose bids were calculated based on Mk/Mo/Yr or Mk/Mo CVR (i.e., not based on KW or AG CVR)  
+  Increase/decrease KW bid by the half the % above or below overall site CVR the market CVR is relative to overall site average  
+  i.e., if overall CVR for the entire site is 1.0% and DAL overall CVR is 1.07%, increase bids for KWs in DAL by 3.5%  
+  
+  
+c) Cap bids at reasonable levels, based on their quality score  
+KWs with QS>7 cannot be higher than Est First Pos Bid  
+KWs with QS<8 and QS>5 cannot be higher than average of Est Top of Page Bid and Est First Pos Bid  
+KWs with QS<6 cannot be higher than (Est Top of Page Bid *0.9) + (Est First Pos Bid *0.1)  
+No bids can be higher than $12  
+
+
+d) Cap bids of broad match KWs  
+Ensure that no bid for a broad match KW is greater than any bid for an exact match KW within the same ad group  
 E.g., if bids for exact match KWs within the same ad group are $1.50, $1.75 and $1.60, then if a broad match KW with a calculated of bid of $2.00 should have its bid reduced to $1.50
 
 ## Definitions:
