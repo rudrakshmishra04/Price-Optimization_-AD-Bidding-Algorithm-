@@ -59,11 +59,11 @@ o   Campaigns target geographical areas where users are located (e.g., a campaig
 o   CMPNs contain multiple AGs; AGs contain multiple KWs (learn more here)
 QS = quality score = value google assigns to each KW based (learn more here)
 Impressions = # of times a KW’s ad was seen on in google search results
-Clicks = # of times the KW’s ads were clicked (i.e., # of times people clicked through to carvana.com)
+Clicks = # of times the KW’s ads were clicked (i.e., # of times people clicked through)
 Conversions = # of car sales generated from the clicks
 CTR = click through rate = clicks / impressions
 CVR = conversion rate = conversions / clicks
-ARS = average revenue per sale = amount of money Carvana makes per car sold
+ARS = average revenue per sale = amount of money made per item sold
 o   This is specific to each make and model, but not by year
 
 Est First Pos. Bid = Google’s estimate for the bid required to show up in first position (see below)
