@@ -16,22 +16,30 @@ Make_Model_ARS – contains the historical average ARS for each make/model
 
 ### Step 1: Calculate initial bid for each KW based on its historical performance
 
-  a) If KW has >10 conversions
-  Calculate KW bid based on KW’s historical performance
-  New KW Bid = KW CVR * Mk/Mo ARS
-  b) If KW has <11 conversions but ad group has >10 conversions
-  Calculate KW bid based on its ad group’s historical performance
-  New KW Bid = AG CVR * Mk/Mo ARS
-  c) If AG has <11 conversions, but Mk/Mo/Yr has >10 conversions
-  Calculate KW bid based on the Mk/Mo’s historical performance
-  New KW bid = Mk/Mo/Yr CVR * Mk/Mo ARS
-  d) If Mk/Mo/Yr has <11 conversions, but Mk/Mo has >10 conversions
-  Calculate KW bid based on the Mk/Mo’s historical performance
-  New KW bid = Mk/Mo CVR * Mk/Mo ARS
-  e) If Mk/Mo has <11 conversions
-  New KW bid = Est First Pos Bid
-  Hint: aggregate KW data to level needed to get AG, Mk/Mo/Yr, Mk/Mo and Mkt level data
-  Hint: several attributes (e.g., Mkt, Mk/Mo, etc) will need to be extracted from CMPN and AG names
+a) If KW has >10 conversions  
+  Calculate KW bid based on KW’s historical performance  
+  New KW Bid = KW CVR * Mk/Mo ARS  
+  
+  
+  b) If KW has <11 conversions but ad group has >10 conversions  
+  Calculate KW bid based on its ad group’s historical performance  
+  New KW Bid = AG CVR * Mk/Mo ARS  
+  
+  
+  c) If AG has <11 conversions, but Mk/Mo/Yr has >10 conversions  
+  Calculate KW bid based on the Mk/Mo’s historical performance  
+  New KW bid = Mk/Mo/Yr CVR * Mk/Mo ARS  
+  
+  
+  d) If Mk/Mo/Yr has <11 conversions, but Mk/Mo has >10 conversions  
+  Calculate KW bid based on the Mk/Mo’s historical performance  
+  New KW bid = Mk/Mo CVR * Mk/Mo ARS  
+  
+  
+  e) If Mk/Mo has <11 conversions  
+  New KW bid = Est First Pos Bid  
+  Hint: aggregate KW data to level needed to get AG, Mk/Mo/Yr, Mk/Mo and Mkt level data  
+  Hint: several attributes (e.g., Mkt, Mk/Mo, etc) will need to be extracted from CMPN and AG names  
  
 
 ### Step 2: Adjust calculated bid based on the following considerations:
